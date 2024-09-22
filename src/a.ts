@@ -46,6 +46,7 @@ interface User{
     name:string,
     age:number,
     email:string
+    grade?:number
 }
 
 function isLegal(user:User){
@@ -57,4 +58,25 @@ function isLegal(user:User){
         console.log("Not Legal");
         
     }
+}
+
+function greet(user:User){
+    console.log("Hello " + user.name);
+    
+}
+greet({
+    name:"Samar",
+    age:21,
+    email:"xyz@gmail.com"
+})
+
+isLegal({
+    name:"Samar",
+    age:21,
+    email:"xyz@gmail.com"
+})
+
+type isOk={
+ name:"Abbas",
+ age:20
 }
